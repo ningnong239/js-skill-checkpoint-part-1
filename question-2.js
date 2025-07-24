@@ -12,4 +12,4 @@ let totalValue = 0;
 for (let i = 0; i < inventory.length; i++) {
   totalValue += inventory[i].price * inventory[i].quantity;
 }
-console.log(totalValue);
+console.log(`มูลค่ารวมของจำนวนสินค้าทั้งหมดในสต็อก ${totalValue} บาท`);

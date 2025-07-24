@@ -17,7 +17,7 @@ const products = [
   },
 ];
 
-const promotionCode = "";
+
 // เริ่มเขียนโค้ดตรงนี้
 function calculateTotalPrice(products, promotionCode){
   let total = 0;
@@ -25,16 +25,18 @@ function calculateTotalPrice(products, promotionCode){
     total += products[i].price * products[i].quantity;
   }
   if (promotionCode === "SALE20") {
-    return total = total * (20 / 100);
+    return total * 0.8;
   } else if (promotionCode === "SALE50") {
-    return total = total * (50 / 100);
+    return total = total * 0.5;
   } else {
-    return total = total
+    return total;
   }
 }
-promotionCode = "SALE20";
-console.log(calculateTotalPrice(products, promotionCode));
+let promotionCode = "SALE20";
+console.log(calculateTotalPrice(products, promotionCode)); // 68
+
 promotionCode = "SALE50";
-console.log(calculateTotalPrice(products, promotionCode));
+console.log(calculateTotalPrice(products, promotionCode)); // 42.5
+
 promotionCode = "";
 console.log(calculateTotalPrice(products, promotionCode));
